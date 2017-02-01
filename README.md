@@ -59,11 +59,15 @@ The `MockApi` supports the following options:
   <td>If set to a filename, requests will be logged to the specified file.
   If `null` or omitted, no file logging is done.</td>
 </tr>
+<tr>
+  <td>`testPath`</td>
+  <td>Canned responses will be served from this path. Defaults to `test/mock-api`.</td>
+</tr>
 </table>
 
 ## Canned Responses
 
-Canned responses live in your project's `test/mock-api` directory.  This
+Canned responses live in the specified `testPath` location (see options above).  This
 directory and its subdirectories has the same structure as your API.  For
 example, to serve an endpoint `/v2/foobizzle`, populate the file
 `test/mock-api/GET/v2/foobizzle.json`.
